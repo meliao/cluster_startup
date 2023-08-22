@@ -13,8 +13,8 @@ from src.network import Llayers
 
 def setup_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument('-L_vals', nargs='+', default=[2, 4])
-    parser.add_argument('-weight_decay_vals', nargs='+', default=[1e-03, ])
+    parser.add_argument('-L_vals', nargs='+', default=[2, 4], type=int)
+    parser.add_argument('-weight_decay_vals', nargs='+', default=[1e-03, ], type=float)
     parser.add_argument('-R_val', type=int, default=2)
     parser.add_argument('-dataset_size', default=64)
     parser.add_argument('-n_epochs', type=int, default=10)
