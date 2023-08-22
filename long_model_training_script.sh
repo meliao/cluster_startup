@@ -21,7 +21,7 @@ which python
 python train_network.py \
 # TODO: delete this line and fill out the missing parameters
 -n_epochs XXX \
--n_epochs_per_log XXX \ 
+-n_epochs_per_log XXX \
 -L_vals XXX \
 -train_results_dir results_long \
 -models_dir models_long
