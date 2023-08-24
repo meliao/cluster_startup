@@ -68,6 +68,10 @@ sbatch long_model_training_script.sh
 ```
 
 ### Connecting the server to a Jupyter notebook
+Before we start, check whether there is a jupyter notenbook installed. If not, run the command.
+```
+pip install notebook
+```
 
 1. Allocate a gpu/cpus.
 2. Start your Jupyter notebook in your terminal.
