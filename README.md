@@ -63,9 +63,14 @@ sbatch long_model_training_script.sh
 
 1. Allocate a gpu/cpus.
 2. Start your Jupyter notebook in your terminal.
-   ```
-   bash start_jupyter.sh
-   ```
+```
+bash start_jupyter.sh
+```
+3. Check your job output. Create an SSH tunnel to forward the notebook interface to your local.
+```
+ssh -N -L 8888:$NODEIP:$NODEPORT user@fe01.ai.cs.uchicago.edu
+```
+4. Open your local browser and visit: http://localhost:8888.
 
 ### Practical tricks: tmux, squeue, saving outputs
 1. Why do we need to use tmux? tmux is a terminal multiplexer. This means it allows multiple terminal sessions to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and *continue running in the background*, then later reattached.
