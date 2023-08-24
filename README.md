@@ -7,9 +7,8 @@ Getting started on the UChicago DSI cluster
 ### How to set up Git on cluster?
 1. How can we save git user information on the cluster? 
 ```
-git config --global credential.helper store
 git config --global --unset credential.helper
-git config --global --add credential.helper manager
+git config --global credential.helper store
 ```
 2. Please see the stepwise screencuts here. [Like to set up your password](https://docs.google.com/document/d/13S4rIdJCzNqi_myG9TcjPyorI2n9IHbaqvS8Ao52R5Q/edit?usp=sharing)
 
