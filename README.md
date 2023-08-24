@@ -5,7 +5,7 @@ Getting started on the UChicago DSI cluster
 ## Outline
 
 ### How to set up Git on cluster?
-1. How can we save git user information on the cluster? [Link for details.](https://stackoverflow.com/questions/15381198/remove-credentials-from-git)
+1. How can we save git user information on the cluster? 
 ```
 git config --global credential.helper store
 git config --global --unset credential.helper
