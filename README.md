@@ -61,6 +61,12 @@ sbatch long_model_training_script.sh
 
 ### Connecting the server to a Jupyter notebook
 
+1. Allocate a gpu/cpus.
+2. Start your Jupyter notebook in your terminal.
+   ```
+   bash start_jupyter.sh
+   ```
+
 ### Practical tricks: tmux, squeue, saving outputs
 1. Why do we need to use tmux? tmux is a terminal multiplexer. This means it allows multiple terminal sessions to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and *continue running in the background*, then later reattached.
 ```
