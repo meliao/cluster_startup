@@ -62,3 +62,21 @@ sbatch long_model_training_script.sh
 ### Connecting the server to a Jupyter notebook
 
 ### Practical tricks: tmux, squeue, saving outputs
+1. Why do we need to use tmux? tmux is a terminal multiplexer. This means it allows multiple terminal sessions to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and *continue running in the background*, then later reattached.
+```
+tmux % Create a new session
+tmux ls % List running sessions
+```
+For window management:
+```
+Window Management:
+
+Ctrl-b c: Create a new window
+Ctrl-b %: Split the window vertically into panes
+Ctrl-b ": Split the window horizontally into panes
+Ctrl-b n: Go to the next window
+Ctrl-b p: Go to the previous window
+Ctrl-b x: Kill the current window
+Ctrl-b fn-arrowup/arrowdown: scroll in your window
+```
+
