@@ -33,7 +33,6 @@ conda create -n cluster_startup python=3.10
 conda activate cluster_startup
 conda install pytorch pytorch-cuda -c pytorch -c nvidia
 conda install scipy
-conda env export --from-history > env.yaml
 ```
 
 To make sure the installation of conda gives GPU access:
