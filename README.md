@@ -4,6 +4,15 @@ Getting started on the UChicago DSI cluster
 
 ## Outline
 
+### How to set up Git on cluster?
+1. How can we save git user information on the cluster? [Link for details.](https://stackoverflow.com/questions/15381198/remove-credentials-from-git)
+```
+git config --global credential.helper store
+git config --global --unset credential.helper
+git config --global --add credential.helper manager
+```
+2. Please see the stepwise screencuts here. [Like to set up your password](https://docs.google.com/document/d/13S4rIdJCzNqi_myG9TcjPyorI2n9IHbaqvS8Ao52R5Q/edit?usp=sharing)
+
 ### Setting Up Conda on the Cluster
 
 You will need to install your own version of miniconda on the cluster. [Here is a link to the instructions.](https://github.com/uchicago-dsi/core-facility-docs/blob/main/slurm.md#part-vi-install-conda-for-environment-management)
