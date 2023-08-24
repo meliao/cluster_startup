@@ -33,6 +33,13 @@ To make sure the installation of conda gives GPU access:
 python -c "import torch; print(torch.cuda.is_available())"
 ```
 
+### Know your slurm cluster.
+```
+squeue % Shows the state of jobs.
+scancel 12345 % Used to cancel a job.
+sprio % Displays the priority of pending jobs.
+```
+
 ### Requesting a job with a GPU
 
 To request an interactive job with a GPU on the DSI cluster, you can run the following command:
