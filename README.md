@@ -13,6 +13,14 @@ git config --global credential.helper store
 2. Please see the stepwise screencuts here. [Like to set up your password](https://docs.google.com/document/d/13S4rIdJCzNqi_myG9TcjPyorI2n9IHbaqvS8Ao52R5Q/edit?usp=sharing)
 3. [Git cheat sheet.](https://doabledanny.gumroad.com/l/git-commands-cheat-sheet-pdf)
 
+
+### Know your slurm cluster.
+```
+squeue % Shows the state of jobs.
+scancel 12345 % Used to cancel a job.
+sprio % Displays the priority of pending jobs.
+```
+
 ### Setting Up Conda on the Cluster
 
 You will need to install your own version of miniconda on the cluster. [Here is a link to the instructions.](https://github.com/uchicago-dsi/core-facility-docs/blob/main/slurm.md#part-vi-install-conda-for-environment-management)
@@ -31,13 +39,6 @@ conda env export --from-history > env.yaml
 To make sure the installation of conda gives GPU access:
 ```
 python -c "import torch; print(torch.cuda.is_available())"
-```
-
-### Know your slurm cluster.
-```
-squeue % Shows the state of jobs.
-scancel 12345 % Used to cancel a job.
-sprio % Displays the priority of pending jobs.
 ```
 
 ### Requesting a job with a GPU
@@ -79,7 +80,7 @@ ssh -N -L 8888:$NODEIP:$NODEPORT user@fe01.ai.cs.uchicago.edu
 ```
 4. Open your local browser and visit: http://localhost:8888.
 
-### Practical tricks: tmux, squeue, saving outputs
+### Practical tricks: tmux, saving outputs
 1. Why do we need to use tmux? tmux is a terminal multiplexer. This means it allows multiple terminal sessions to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and *continue running in the background*, then later reattached.
 ```
 tmux % Create a new session
@@ -96,5 +97,9 @@ Ctrl-b n: Go to the next window
 Ctrl-b p: Go to the previous window
 Ctrl-b x: Kill the current window
 Ctrl-b fn-arrowup/arrowdown: scroll in your window
+```
+2. When you are in interactive mode, and want to store all the outputs to a local txt file. You could simply do it by:
+```
+bash run.sh --> my_project_out
 ```
 
