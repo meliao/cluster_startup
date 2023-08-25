@@ -106,3 +106,8 @@ Ctrl-b fn-arrowup/arrowdown: scroll in your window
 bash run.sh --> my_project_out
 ```
 
+3. For submitting dependency jobs, use the following command. You can modify the job name in the long_model_training_script file.
+```
+sbatch -d singleton long_model_training_script.sh
+```
+
