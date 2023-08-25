@@ -40,6 +40,15 @@ To make sure the installation of conda gives GPU access:
 python -c "import torch; print(torch.cuda.is_available())"
 ```
 
+Once your project is done, you'll want to release the code and provide a way to reproduce the conda environment you built. You can do this with an environment file `enviornment.yml` via:
+```
+conda env export --from-history > environment.yml
+```
+and if you give this file to other users, they can create a copy of your conda environment with the command:
+```
+conda env create --name cluster_startup --file environment.yml
+```
+
 ### Requesting a job with a GPU
 
 To request an interactive job with a GPU on the DSI cluster, you can run the following command:
